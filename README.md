@@ -8,6 +8,28 @@
 
 ![enter image description here](https://lh3.googleusercontent.com/ylAdKs-1_8n15wxx-Kz3SFjpsqHNb1fgjVkxCxjtQ2SkVQWQyhhX43bWmMsZCh27Vg8kd3rG9PIi "Schema")
 
+## Functionality
+
+
+```
+Data-Pipeline$ gaia -h
+
+usage: gaia [-h] {upload,read} filename user password
+
+Datapipeline options, must be executed within relative path
+
+positional arguments:
+  {upload,read}  functions
+  filename       * upload: name of file being uploaded --- read: name of file
+                 where query result is being stored --- include .csv extension
+  user           who is accessing the data base
+  password       to authenticate user
+
+optional arguments:
+  -h, --help     show this help message and exit
+
+```
+
 ## Set Up
 **Data Base Initialization**
 
@@ -29,14 +51,3 @@ column_order = ['name_student', 'date', 'test_name', 'name_cell', 'nom_volt',
                 'nom_cap', 'current', 'timestmp', 'voltage']
 ```
 - All fields must not be empty
-
-
-## Functionality
-
-
-## Installation Instructions
-
-SELECT * FROM pg_available_extensions;
-CREATE EXTENSION IF NOT EXISTS ''uuid-ossp"';
-SELECT uuid_generate_v4();
-SELECT NOW()::DATE;  
